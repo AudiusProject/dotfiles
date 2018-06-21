@@ -61,6 +61,7 @@ set laststatus=2
 
 " Extra syntax plugins
 NeoBundle 'tpope/vim-markdown'
+NeoBundle 'tomlion/vim-solidity'
 
 " Tab creation/navigation shortcuts (",#" to jump to tab #)
 nmap <leader>c :tabnew<CR>
@@ -91,7 +92,7 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 au FileType python setl sw=4 sts=4 et
-set textwidth=90
+set textwidth=120
 set autoindent
 
 " End NeoBundle configuration (no calls to NeoBundle below this line)
