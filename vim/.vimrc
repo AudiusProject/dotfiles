@@ -61,6 +61,7 @@ set laststatus=2
 
 " Extra syntax plugins
 NeoBundle 'tpope/vim-markdown'
+NeoBundle 'tomlion/vim-solidity'
 
 " Tab creation/navigation shortcuts (",#" to jump to tab #)
 nmap <leader>c :tabnew<CR>
