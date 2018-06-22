@@ -92,7 +92,7 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 au FileType python setl sw=4 sts=4 et
-set textwidth=120
+set textwidth=90
 set autoindent
 
 " End NeoBundle configuration (no calls to NeoBundle below this line)
