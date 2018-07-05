@@ -50,3 +50,8 @@ alias g='git'
 if [ -x ~/.bashrc_local ]; then
     . ~/.bashrc_local
 fi
+
+cd ~/Development
+
+alias branches="git for-each-ref --sort=committerdate refs/heads/ --format='%(color:red)%(committerdate:short) %(color: cyan)%(refname:short)"
+
