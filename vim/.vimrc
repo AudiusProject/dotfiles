@@ -63,6 +63,8 @@ set laststatus=2
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tomlion/vim-solidity'
 
+NeoBundle 'w0rp/ale'
+
 " Tab creation/navigation shortcuts (",#" to jump to tab #)
 nmap <leader>c :tabnew<CR>
 nmap <leader>n :tabnext<CR>

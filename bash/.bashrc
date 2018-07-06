@@ -17,7 +17,7 @@ export PATH=$PATH:~/Scripts
 
 # BASH Helpers
 alias ls='ls -G'
-alias ll='ls -l'
+alias ll='ls -A -l'
 alias la='ls -A'
 alias l='ls -CF'
 alias countfiles='for t in files links directories; do echo `find . -type ${t:0:1} | wc -l` $t; done 2> /dev/null'
@@ -46,12 +46,10 @@ backup() {
 
 # git -> g
 alias g='git'
-
+alias gb='git for-each-ref --sort=committerdate refs/heads/ --format="%(HEAD)%(color:blue)%(refname:short)%(color:reset) -%(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname)(%(color:green)%(committerdate:relative)%(color:reset))"'
 if [ -x ~/.bashrc_local ]; then
     . ~/.bashrc_local
 fi
 
 cd ~/Development
-
-alias branches="git for-each-ref --sort=committerdate refs/heads/ --format='%(color:red)%(committerdate:short) %(color: cyan)%(refname:short)"
 
