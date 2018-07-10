@@ -31,3 +31,11 @@
   ps = push
   pl = pull
   plr = pull --rebase
+[user]
+	name = Hareesh Nagaraj
+	email = hareesh.nagaraj@gmail.com
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
