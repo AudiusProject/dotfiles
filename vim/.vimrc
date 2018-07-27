@@ -13,6 +13,9 @@ let mapleader = ','
 " Ignore compiled files
 set wildignore=*.o,*.pyc
 
+" OS Clipboard
+set clipboard=unnamed
+
 " NeoBundle setup
 set runtimepath+=~/.vim/bundle/neobundle.vim
 call neobundle#begin(expand('~/.vim/bundle/'))
@@ -63,6 +66,7 @@ set laststatus=2
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tomlion/vim-solidity'
 
+" JS Linter Ale
 NeoBundle 'w0rp/ale'
 
 " Tab creation/navigation shortcuts (",#" to jump to tab #)
