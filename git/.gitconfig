@@ -31,11 +31,3 @@
   ps = push
   pl = pull
   plr = pull --rebase
-[user]
-	name = Your Name Here
-	email = youremail@example.com
-[filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
