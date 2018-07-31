@@ -32,8 +32,8 @@
   pl = pull
   plr = pull --rebase
 [user]
-	name = Hareesh Nagaraj
-	email = hareesh.nagaraj@gmail.com
+	name = Your Name Here
+	email = youremail@example.com
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
