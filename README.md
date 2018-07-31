@@ -1,7 +1,7 @@
 dotfiles
 ========
 
-Roneil Rumburg's configuration dotfiles.
+Sample configuration dotfiles for Audius development. Please fork and modify!
 
 ## Installation:
     # install gnu stow
