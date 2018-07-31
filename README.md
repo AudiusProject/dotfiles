@@ -1,14 +1,15 @@
 dotfiles
-========
+===
 
-Roneil Rumburg's configuration dotfiles.
+Audius Protocol Development dotfiles.
 
 ## Installation:
+
     # install gnu stow
     brew install stow
-
+    
     cd dotfiles
-
+    
     # run setup script (asks what to install)
     ./setup.bash
 
@@ -19,5 +20,6 @@ http://ethanschoonover.com/solarized). The "osx" extra option prompts for both o
 these.
 
 ## Updates:
+
     # update all vim plugins
     ./update.bash
