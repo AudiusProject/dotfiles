@@ -46,12 +46,16 @@ backup() {
 
 # git -> g
 alias g='git'
+
+# pretty view of git branches, ordered by edit date
 alias gb='git for-each-ref --sort=committerdate refs/heads/ --format="%(HEAD)%(color:blue)%(refname:short)%(color:reset) -%(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname)(%(color:green)%(committerdate:relative)%(color:reset))"'
 
-alias devl='tmuxp load ~/dotfiles/tmuxp/.tmuxplarge.yaml'
 alias nr='npm run '
+
+# forks gitk into separate process
 alias gitk='gitk &'
 
+# automatically start tmux
 if command -v tmux>/dev/null; then
   [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
 fi
