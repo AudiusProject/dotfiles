@@ -1,7 +1,7 @@
 dotfiles
-===
+=======
 
-Audius Protocol Development dotfiles.
+Sample configuration dotfiles for Audius development. Please fork and modify!
 
 ## Installation:
 
