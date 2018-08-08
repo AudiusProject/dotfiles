@@ -116,5 +116,8 @@ colorscheme solarized
 " Required per NeoBundle docs
 filetype plugin indent on
 
+se mouse+=a
+
 " Verify NeoBundle installation
 NeoBundleCheck
+

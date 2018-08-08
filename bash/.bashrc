@@ -1,7 +1,7 @@
 ### Standard stuff ###
 if [[ $- != *i* ]] ; then
-	# Shell is non-interactive, return now.
-	return
+      # Shell is non-interactive, return now.
+      return
 fi
 
 export HISTFILESIZE=20000
