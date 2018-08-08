@@ -34,16 +34,6 @@ alias servedir='python -m SimpleHTTPServer'
 alias tma='tmux attach -d -t'
 alias git-tmux='tmux new -s $(basename $(pwd))'
 
-backup() {
-  read -p "Backing up to '$1'. Will overwrite. Continue (y/n)? " choice
-  if [[ "$choice" != "y" ]]; then
-    echo "Aborting."
-    return 1
-  fi
-  # network drives do not support symlinks
-  rsync -ra --no-links --exclude '.cache' --exclude '.gvfs' --progress --delete /home/roneil $1
-}
-
 # git -> g
 alias g='git'
 
