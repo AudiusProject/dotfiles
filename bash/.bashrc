@@ -46,16 +46,6 @@ alias gitk='gitk &'
 # clear all vim swap files
 alias clearswap='find . -type f -name "*.sw[klmnop]" -delete'
 
-backup() {
-  read -p "Backing up to '$1'. Will overwrite. Continue (y/n)? " choice
-  if [[ "$choice" != "y" ]]; then
-    echo "Aborting."
-    return 1
-  fi
-  # network drives do not support symlinks
-  rsync -ra --no-links --exclude '.cache' --exclude '.gvfs' --progress --delete /home/roneil $1
-}
-
 if [ -x ~/.bashrc_local ]; then
     . ~/.bashrc_local
 else
