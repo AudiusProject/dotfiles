@@ -55,6 +55,9 @@ alias nr='npm run '
 # forks gitk into separate process
 alias gitk='gitk &'
 
+# clear all vim swap files
+alias clearswap='find . -type f -name "*.sw[klmnop]" -delete'
+
 # automatically start tmux
 if command -v tmux>/dev/null; then
   [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux

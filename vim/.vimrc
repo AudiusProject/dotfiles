@@ -69,6 +69,8 @@ NeoBundle 'tomlion/vim-solidity'
 " JS Linter Ale
 NeoBundle 'w0rp/ale'
 
+let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
+
 " Tab creation/navigation shortcuts (",#" to jump to tab #)
 nmap <leader>c :tabnew<CR>
 nmap <leader>n :tabnext<CR>
