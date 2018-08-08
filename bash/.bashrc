@@ -34,6 +34,18 @@ alias servedir='python -m SimpleHTTPServer'
 alias tma='tmux attach -d -t'
 alias git-tmux='tmux new -s $(basename $(pwd))'
 
+# git -> g
+alias g='git'
+
+# pretty view of git branches, ordered by edit date
+alias gb='git for-each-ref --sort=committerdate refs/heads/ --format="%(HEAD)%(color:blue)%(refname:short)%(color:reset) -%(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname)(%(color:green)%(committerdate:relative)%(color:reset))"'
+
+# forks gitk into separate process
+alias gitk='gitk &'
+
+# clear all vim swap files
+alias clearswap='find . -type f -name "*.sw[klmnop]" -delete'
+
 backup() {
   read -p "Backing up to '$1'. Will overwrite. Continue (y/n)? " choice
   if [[ "$choice" != "y" ]]; then
@@ -44,26 +56,9 @@ backup() {
   rsync -ra --no-links --exclude '.cache' --exclude '.gvfs' --progress --delete /home/roneil $1
 }
 
-# git -> g
-alias g='git'
-
-# pretty view of git branches, ordered by edit date
-alias gb='git for-each-ref --sort=committerdate refs/heads/ --format="%(HEAD)%(color:blue)%(refname:short)%(color:reset) -%(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname)(%(color:green)%(committerdate:relative)%(color:reset))"'
-
-alias nr='npm run '
-
-# forks gitk into separate process
-alias gitk='gitk &'
-
-# clear all vim swap files
-alias clearswap='find . -type f -name "*.sw[klmnop]" -delete'
-
-# automatically start tmux
-if command -v tmux>/dev/null; then
-  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
-fi
-
 if [ -x ~/.bashrc_local ]; then
     . ~/.bashrc_local
+else
+  echo "No local file loaded"
 fi
 
