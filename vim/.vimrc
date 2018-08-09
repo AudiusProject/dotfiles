@@ -70,6 +70,7 @@ NeoBundle 'tomlion/vim-solidity'
 NeoBundle 'w0rp/ale'
 
 let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
+nmap <leader>fix :ALEFix<CR>
 
 " Tab creation/navigation shortcuts (",#" to jump to tab #)
 nmap <leader>c :tabnew<CR>
