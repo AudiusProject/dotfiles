@@ -23,3 +23,19 @@ these.
 
     # update all vim plugins
     ./update.bash
+
+### Python Vim
+
+Install python3 neovim bundle
+
+```
+pip3 install neovim
+```
+
+Install global vim (macOs)
+
+Required for python3 support
+
+```
+brew install vim --with-override-system-vi
+```
