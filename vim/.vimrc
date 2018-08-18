@@ -69,8 +69,24 @@ NeoBundle 'tomlion/vim-solidity'
 " JS Linter Ale
 NeoBundle 'w0rp/ale'
 
-let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
+let g:ale_fixers = { 
+      \'javascript': 
+      \ ['prettier', 'eslint'],
+      \ 'python':
+      \ ['remove_trailing_lines', 
+      \   'isort',
+      \   'ale#fixers#generic_python#BreakUpLongLines', 
+      \   'autopep8',
+      \   'black',
+      \    'yapf']
+      \}
+
 nmap <leader>fix :ALEFix<CR>
+
+" Python / deoplete (better autcomplete) plugin "
+NeoBundle 'ambv/black'
+
+nmap <leader>bl : Black<CR>
 
 " Tab creation/navigation shortcuts (",#" to jump to tab #)
 nmap <leader>c :tabnew<CR>
@@ -117,6 +133,9 @@ colorscheme solarized
 " Required per NeoBundle docs
 filetype plugin indent on
 
+" Remap 'jk' to 'esc' for convenience
+inoremap jj <esc>
+inoremap jj <esc>
+
 " Verify NeoBundle installation
 NeoBundleCheck
-
