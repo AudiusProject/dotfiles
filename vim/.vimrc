@@ -86,6 +86,13 @@ nmap <leader>fix :ALEFix<CR>
 " Python / deoplete (better autcomplete) plugin "
 NeoBundle 'ambv/black'
 
+" Python syntax
+" NeoBundle 'vim-syntastic/syntastic'
+" NeoBundle 'vim-python/python-syntax'
+NeoBundle 'hdima/python-syntax'
+
+let g:python_highlight_all=1
+
 " Shortcut for ',' + 'bl' ---> Enable BLACK
 nmap <leader>bl : Black<CR>
 
@@ -101,6 +108,9 @@ endwhile
 
 " General vim shortcuts
 nmap <leader>p :set paste!<CR>
+
+" Toggle line number
+nmap <leader>nu: set nonu!<CR>
 
 " Search settings
 set hlsearch
@@ -136,6 +146,8 @@ filetype plugin indent on
 
 " Remap 'jj' to 'esc' for convenience
 inoremap jj <esc>
+
+set backspace=indent,eol,start
 
 " Verify NeoBundle installation
 NeoBundleCheck
