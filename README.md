@@ -1,8 +1,7 @@
 dotfiles
 =======
 
-My personal dotfiles, forked from the AudiusProject. Periodically merged back to main
-repository
+Sample configuration dotfiles for Audius development. Please fork and modify!
 
 ## Installation:
 
