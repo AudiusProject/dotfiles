@@ -40,6 +40,9 @@ alias g='git'
 # pretty view of git branches, ordered by edit date
 alias gb='git for-each-ref --sort=committerdate refs/heads/ --format="%(HEAD)%(color:blue)%(refname:short)%(color:reset) -%(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname)(%(color:green)%(committerdate:relative)%(color:reset))"'
 
+# forks gitk into separate process
+alias gitk='gitk &'
+
 # clear all vim swap files
 alias clearswap='find . -type f -name "*.sw[klmnop]" -delete'
 
@@ -49,6 +52,3 @@ else
   echo "No local file loaded"
 fi
 
-# Convenient shortcut to start livedown monitoring
-# https://www.npmjs.com/package/livedown
-alias livedown='livedown start README.md  --port 1337'
