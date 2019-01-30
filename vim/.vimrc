@@ -137,5 +137,8 @@ filetype plugin indent on
 " Remap 'jj' to 'esc' for convenience
 inoremap jj <esc>
 
+" Fix backspace behavior
+set backspace=indent,eol,start
+
 " Verify NeoBundle installation
 NeoBundleCheck
